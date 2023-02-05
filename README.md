@@ -1,3 +1,5 @@
+![preview](https://user-images.githubusercontent.com/359192/216814118-6a75c025-5687-4251-b70a-73704cebb096.png)
+
 # PHP Fiddle for Windows
 
 PHP Fiddle is a Windows desktop application that allows you to execute PHP code on the fly. Excellent for testing, learning, and experimenting without having to install a web server or IDE environment. Suitable for both beginners and professionals of all ages looking for a fast way to execute code. Created by swedish PHP developer T. Almroth.
