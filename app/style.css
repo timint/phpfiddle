@@ -52,7 +52,6 @@ input {
 .navbar-inner {
   display: flex;
   margin: 0 auto;
-  max-width: 1440px;
   align-items: center;
 }
 .navbar .brand {
@@ -70,6 +69,7 @@ input {
   opacity: .75;
   border: 0;
   vertical-align: middle;
+  margin-top: -5px;
 }
 
 .navbar .nav {
