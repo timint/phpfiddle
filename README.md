@@ -27,7 +27,7 @@ The javascript source code editor bundled with this software is [CodeMirror](htt
 
 # How To Build
 
-```markdown
+
 ## How To Build
 
 Make sure you have Node.js v22+ installed and follow these steps to build PHP Fiddle from source:
