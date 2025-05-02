@@ -1,0 +1,20 @@
+{
+  "name": "php-fiddle",
+  "productName": "PHP Fiddle",
+  "version": "8.4.6",
+  "description": "Develop desktop apps using php as backend for electron.",
+  "repository": "https://github.com/timint/phpfiddle",
+  "keywords": [
+    "Electron",
+    "desktop application",
+    "PHP",
+    "cross-platform"
+  ],
+  "author": "T. Almroth",
+  "license": "CC0-1.0",
+  "type": "module",
+  "main": "main.mjs",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

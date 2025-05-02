@@ -1,0 +1,50 @@
+{
+  "name": "php-fiddle",
+  "productName": "PHP Fiddle",
+  "version": "2.0.0",
+  "description": "Cross-platform desktop application for fiddling with PHP code.",
+  "repository": "https://github.com/timint/phpfiddle",
+  "keywords": [
+    "cross-platform",
+    "electron",
+    "desktop application",
+    "php",
+    "fiddle",
+    "code editor",
+    "code execution"
+  ],
+  "author": "T. Almroth",
+  "license": "CC0-1.0",
+  "type": "module",
+  "files": [
+    "main.js",
+    "src/**/*"
+  ],
+  "main": "app/main.mjs",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "electron": "^36.0",
+    "electron-builder": "^26.0.14"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "node build.mjs"
+  },
+  "build": {
+    "directories": {
+        "buildResources": "build"
+    },
+    "win": {
+        "asar": false,
+        "target": "nsis",
+        "icon": "icons/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "icons/icon.ico",
+      "installerHeaderIcon": "icons/icon.ico",
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "php": {
+    "directory": "php",
+    "docroot": "web",
+    "port": 5555,
+    "directives": {
+      "display_errors": 0,
+      "expose_php": 0
+    }
+  },
+  "window": {
+    "width": 1200,
+    "height": 720
+  }
+}

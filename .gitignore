@@ -2,12 +2,13 @@
 # Application Files #
 #####################
 
-releases/*
-win/debug.log
-win/webcache/*
+dist/*
+node_modules/
+.idea/
+.vscode/
 
 ######################
-# OS generated files #
+# OS Generated Files #
 ######################
 
 .DS_Store
