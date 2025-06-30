@@ -22,7 +22,10 @@ let mainWindow;
 function createWindow() {
   let runtimePromise = phpRuntime.run();
 
-  mainWindow = new BrowserWindow({width: config.window.width, height: config.window.height});
+  mainWindow = new BrowserWindow({
+  	width: config.window.width,
+  	height: config.window.height
+  });
   mainWindow.loadURL('http://'+phpRuntime.host+':'+phpRuntime.port+'/');
 
   //mainWindow.webContents.openDevTools()

@@ -102,7 +102,7 @@ function checkServer(host, port, cb) {
     .on('error', err => {
       if (err.code === 'ECONNREFUSED') {
         console.error('PHP server not started. Retrying...');
-        setTimeout(runCheck, 250);
+        setTimeout(runCheck, 1000);
       } else {
         cb();
       }

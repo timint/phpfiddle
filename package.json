@@ -31,20 +31,5 @@
   "scripts": {
     "start": "electron .",
     "build": "node build.mjs"
-  },
-  "build": {
-    "directories": {
-        "buildResources": "build"
-    },
-    "win": {
-        "asar": false,
-        "target": "nsis",
-        "icon": "icons/icon.ico"
-    },
-    "nsis": {
-      "installerIcon": "icons/icon.ico",
-      "installerHeaderIcon": "icons/icon.ico",
-      "deleteAppDataOnUninstall": true
-    }
   }
 }

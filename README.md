@@ -25,9 +25,6 @@ The PHP logotype is property of [The PHP Group](https://www.php.net/credits.php)
 
 The javascript source code editor bundled with this software is [CodeMirror](https://codemirror.net/).
 
-# How To Build
-
-
 ## How To Build
 
 Make sure you have Node.js v22+ installed and follow these steps to build PHP Fiddle from source:
@@ -36,15 +33,12 @@ Make sure you have Node.js v22+ installed and follow these steps to build PHP Fi
 # Clone the project and navigate to the directory
 git clone https://github.com/timint/phpfiddle.git && cd phpfiddle
 
-# Install yarn package manager
-npm install --g yarn
-
 # Install dependencies
-yarn install
+npm install
 
 # Simulate running the app
-yarn run start
+npm run start
 
 # Build and compile app to dist/ folder
-yarn run build
+npm run build
 ```

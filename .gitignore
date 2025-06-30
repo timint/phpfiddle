@@ -6,6 +6,8 @@ dist/*
 node_modules/
 .idea/
 .vscode/
+package-lock.json
+yarn.lock
 
 ######################
 # OS Generated Files #
