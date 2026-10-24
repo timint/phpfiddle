@@ -6,7 +6,7 @@
   "repository": "https://github.com/timint/phpfiddle",
   "keywords": [
     "cross-platform",
-    "electron",
+    "tauri",
     "desktop application",
     "php",
     "fiddle",
@@ -16,20 +16,18 @@
   "author": "T. Almroth",
   "license": "CC0-1.0",
   "type": "module",
-  "files": [
-    "main.js",
-    "src/**/*"
-  ],
-  "main": "app/main.mjs",
   "engines": {
     "node": ">=22.0.0"
   },
   "devDependencies": {
-    "electron": "^36.0",
-    "electron-builder": "^26.0.14"
+    "@tauri-apps/cli": "~2.12.4"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "~2.12.4"
   },
   "scripts": {
-    "start": "electron .",
-    "build": "node build.mjs"
+    "build": "tauri build",
+    "dev": "tauri dev",
+    "update": "bun update --install && cargo update --manifest-path core/Cargo.toml"
   }
 }

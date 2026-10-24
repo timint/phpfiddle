@@ -19,7 +19,7 @@ PHP Fiddle is a Windows desktop application that allows you to execute PHP code 
 
 ## Credits
 
-The project is built with Node.js using [Electron](https://www.electronjs.org/).
+The project is built using [Tauri](https://tauri.app/) (Rust) with a web frontend — Node.js is used for frontend tooling.
 
 The PHP logotype is property of [The PHP Group](https://www.php.net/credits.php).
 
@@ -27,18 +27,48 @@ The javascript source code editor bundled with this software is [CodeMirror](htt
 
 ## How To Build
 
-Make sure you have Node.js v22+ installed and follow these steps to build PHP Fiddle from source:
+## FastCGI mode
+
+This build uses PHP in FastCGI mode (php-cgi / php-fpm) and an internal HTTP → FastCGI proxy. By default the app spawns `php-cgi -b 127.0.0.1:9000` and the proxy listens on the port configured in `ui/config.json` (the `php.fastcgi_port` and `php.port` fields). Ensure `php-cgi` (or an equivalent FastCGI-capable PHP binary) is present in the supplied `ui/php` directory or available on PATH.
+
+
+
+Make sure you have Node.js v22+ installed and the Rust toolchain (required by Tauri). Then follow these steps to build PHP Fiddle from source:
 
 ```bash
 # Clone the project and navigate to the directory
 git clone https://github.com/timint/phpfiddle.git && cd phpfiddle
 
-# Install dependencies
+# Install Node dependencies
 npm install
 
-# Simulate running the app
+# Install Rust toolchain (if missing)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup toolchain install stable
+
+# Install the Tauri CLI (globally optional, npx works too)
+npm install -D @tauri-apps/cli
+# or: cargo install tauri-cli
+
+# Run the app in dev mode (starts PHP server and opens the Tauri window)
 npm run start
 
-# Build and compile app to dist/ folder
+# Build native bundles (requires platform-specific tools)
 npm run build
+```
+
+# How To Run On Linux
+
+```
+# Update APT resources
+sudo apt update
+
+# Install dependencies
+sudo apt install libfuse2 php
+
+# Remove app restriction
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+# Run the app
+./PHPFiddle.AppImage
 ```

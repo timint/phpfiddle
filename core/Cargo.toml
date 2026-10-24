@@ -1,0 +1,34 @@
+[package]
+name = "php-fiddle"
+version = "1.0.0"
+description = "A PHP code execution sandbox"
+authors = ["T. Almroth"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+# Only `rlib` is needed for the desktop binary target. `staticlib`/`cdylib`
+# are only required for mobile (iOS/Android) builds and make the desktop
+# build produce a corrupt rlib artifact.
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.7.4", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.12.5", features = [] }
+tauri-plugin-log = "2"
+reqwest = { version = "0.11", features = ["blocking", "rustls-tls"] }
+once_cell = "1.18"
+fastcgi-client = { version = "0.12", features = ["tokio"] }
+tiny_http = "0.12"
+mime_guess = "2.0"
+tokio = { version = "1", features = ["full"] }

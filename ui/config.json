@@ -3,6 +3,7 @@
     "directory": "php",
     "docroot": "web",
     "port": 5555,
+    "fastcgi_port": 9000,
     "directives": {
       "display_errors": 0,
       "expose_php": 0
